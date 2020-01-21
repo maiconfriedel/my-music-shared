@@ -49,7 +49,7 @@ export default function Artists({ artists }) {
 
 const styles = StyleSheet.create({
   artistList: {
-    marginTop: 5,
+    marginTop: 10,
     marginBottom: 50
   },
   item: {

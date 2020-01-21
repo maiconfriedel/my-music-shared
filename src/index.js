@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   StyleSheet,
-  StatusBar,
   View,
   TextInput,
   TouchableOpacity,
@@ -13,7 +12,7 @@ import { FontAwesome } from "@expo/vector-icons";
 
 import Artists from "./components/Artists";
 
-import api from "./services/api";
+import { deezerApi } from "./services/api";
 
 export default function Main() {
   const [text, setText] = useState("");
@@ -21,7 +20,7 @@ export default function Main() {
 
   async function handleBandSearch(e) {
     Keyboard.dismiss();
-    const response = await api.get(`/search/artist?q=${text}`);
+    const response = await deezerApi.get(`/search/artist?q=${text}`);
 
     setArtists(response.data.data);
   }

@@ -87,13 +87,13 @@ const Routes = createAppContainer(
           tabBarLabel: "Artistas"
         }
       },
-      Musics: {
-        screen: MusicsStack,
-        navigationOptions: {
-          tabBarIcon: <FontAwesome name="music" size={22} />,
-          tabBarLabel: "Músicas"
-        }
-      },
+      // Musics: {
+      //   screen: MusicsStack,
+      //   navigationOptions: {
+      //     tabBarIcon: <FontAwesome name="music" size={22} />,
+      //     tabBarLabel: "Músicas"
+      //   }
+      // },
       Map: {
         screen: MapStack,
         navigationOptions: {
