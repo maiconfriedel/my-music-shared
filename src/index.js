@@ -33,7 +33,7 @@ export default function Main() {
           style={styles.bandSearchInput}
           value={text}
           onChangeText={setText}
-          placeholder="Digite a banda à pesquisar..."
+          placeholder="Digite o artista a pesquisar..."
           autoCapitalize="words"
         />
         <TouchableOpacity
@@ -54,12 +54,12 @@ export default function Main() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#7159c1",
+    backgroundColor: "#f2f2f2",
     padding: 10
   },
   bandSearchContainer: {
-    flexDirection: "row",
-    top: StatusBar.currentHeight + 10
+    flexDirection: "row"
+    // top: StatusBar.currentHeight + 10
   },
   bandSearchInput: {
     flex: 1,
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     backgroundColor: "#5f47ad",
-    borderRadius: 25,
+    borderRadius: 20,
     justifyContent: "center",
     alignItems: "center",
     marginLeft: 5

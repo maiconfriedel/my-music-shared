@@ -19,6 +19,7 @@ export default function Artists({ artists }) {
   return (
     <View style={styles.artistList}>
       <FlatList
+        showsVerticalScrollIndicator={false}
         data={artists}
         keyExtractor={item => String(item.id)}
         renderItem={({ item }) => (
@@ -48,13 +49,16 @@ export default function Artists({ artists }) {
 
 const styles = StyleSheet.create({
   artistList: {
-    marginTop: 50,
+    marginTop: 5,
     marginBottom: 50
   },
   item: {
     flexDirection: "row",
     alignItems: "center",
-    height: 65
+    height: 60,
+    backgroundColor: "#ededed",
+    marginBottom: 2,
+    borderRadius: 30
   },
   artistImage: {
     width: 60,
@@ -62,10 +66,11 @@ const styles = StyleSheet.create({
     borderRadius: 30
   },
   artistName: {
-    color: "#fff",
+    color: "#000",
     marginLeft: 10,
     fontSize: 15,
     maxWidth: 250
+    // fontWeight: "bold"
   },
   addArtistButtonContainer: {
     flexDirection: "row",

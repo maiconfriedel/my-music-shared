@@ -1,6 +1,9 @@
 import React from "react";
-import Main from "./src";
+import { Linking } from "expo";
+import Routes from "./src/routes";
 
 export default function App() {
-  return <Main />;
+  const prefix = Linking.makeUrl("/");
+
+  return <Routes uriPrefix={prefix} />;
 }
