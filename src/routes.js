@@ -16,7 +16,12 @@ import { TouchableOpacity, Text } from "react-native";
 
 const MainStack = createStackNavigator(
   {
-    Main
+    Main: {
+      screen: Main,
+      navigationOptions: {
+        title: "Procurar Artistas"
+      }
+    }
   },
   {
     defaultNavigationOptions: {
@@ -37,56 +42,61 @@ const MainStack = createStackNavigator(
       headerTintColor: "#fff",
       headerStyle: {
         backgroundColor: "#5f47ad"
-      },
-      title: "Procurar Artistas"
+      }
     }
   }
 );
 
-const MusicsStack = createStackNavigator(
-  {
-    Musics
-  },
-  {
-    defaultNavigationOptions: {
-      headerShown: true,
-      headerTintColor: "#fff",
-      headerStyle: {
-        backgroundColor: "#5f47ad"
-      },
-      title: "Minhas Músicas"
-    }
-  }
-);
+// const MusicsStack = createStackNavigator(
+//   {
+//     Musics
+//   },
+//   {
+//     defaultNavigationOptions: {
+//       headerShown: true,
+//       headerTintColor: "#fff",
+//       headerStyle: {
+//         backgroundColor: "#5f47ad"
+//       },
+//       title: "Minhas Músicas"
+//     }
+//   }
+// );
 
 const MapStack = createStackNavigator(
   {
-    Map
+    Map: {
+      screen: Map,
+      navigationOptions: {
+        title: "Localizar"
+      }
+    }
   },
   {
     defaultNavigationOptions: {
-      headerShown: true,
       headerTintColor: "#fff",
       headerStyle: {
         backgroundColor: "#5f47ad"
-      },
-      title: "Localizar"
+      }
     }
   }
 );
 
 const ProfileStack = createStackNavigator(
   {
-    Profile
+    Profile: {
+      screen: Profile,
+      navigationOptions: {
+        title: "Meu Perfil"
+      }
+    }
   },
   {
     defaultNavigationOptions: {
-      headerShown: true,
       headerTintColor: "#fff",
       headerStyle: {
         backgroundColor: "#5f47ad"
-      },
-      title: "Meu Perfil"
+      }
     }
   }
 );
