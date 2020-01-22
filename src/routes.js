@@ -8,10 +8,11 @@ import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 
-import Main from "./index";
+import Main from "./pages/Main";
 import Musics from "./pages/Musics";
 import Map from "./pages/Map";
 import Profile from "./pages/Profile";
+import { TouchableOpacity, Text } from "react-native";
 
 const MainStack = createStackNavigator(
   {
@@ -20,11 +21,24 @@ const MainStack = createStackNavigator(
   {
     defaultNavigationOptions: {
       headerShown: true,
+      headerRight: () => (
+        <TouchableOpacity
+          style={{
+            marginRight: 10,
+            width: 100,
+            alignItems: "flex-end"
+          }}
+        >
+          <Text style={{ color: "#fff" }}>
+            <MaterialCommunityIcons name="format-list-bulleted" size={26} />
+          </Text>
+        </TouchableOpacity>
+      ),
       headerTintColor: "#fff",
       headerStyle: {
         backgroundColor: "#5f47ad"
       },
-      title: "Meus Artistas"
+      title: "Procurar Artistas"
     }
   }
 );

@@ -10,9 +10,9 @@ import {
 } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
-import Artists from "./components/Artists";
+import Artists from "../../components/Artists";
 
-import { deezerApi } from "./services/api";
+import { deezerApi } from "../../services/api";
 
 export default function Main() {
   const [text, setText] = useState("");
@@ -20,7 +20,7 @@ export default function Main() {
 
   async function handleBandSearch(e) {
     Keyboard.dismiss();
-    const response = await deezerApi.get(`/search/artist?q=${text}`);
+    const response = await deezerApi.get(`/search/artist?q=${text}&limit=100`);
 
     setArtists(response.data.data);
   }
