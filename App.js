@@ -1,9 +1,13 @@
 import React from "react";
-import { Linking } from "expo";
-import Routes from "./src/routes";
+import AppRouter from "./AppRouter";
+
+import { Provider } from "react-redux";
+import store from "./src/store";
 
 export default function App() {
-  const prefix = Linking.makeUrl("/");
-
-  return <Routes uriPrefix={prefix} />;
+  return (
+    <Provider store={store}>
+      <AppRouter />
+    </Provider>
+  );
 }
